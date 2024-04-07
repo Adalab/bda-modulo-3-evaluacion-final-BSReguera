@@ -31,14 +31,13 @@ Los temas cubiertos en la evaluación final incluyen:
 # 2. HERRAMIENTAS UTILIZADAS: 
 - La prueba se ha realizado en VSCode en archivos ".ipynb" y ".py".
 
-Las librerías utilizadas han sido: Pandas, Numpy, Seaborn, Matplotlib  y mysql.connector.
+Las librerías utilizadas han sido: Pandas, Numpy, Seaborn, Matplotlib, mysql.connector y scipy.stats.
 
 # 3. CONTENIDO: 
 - Customer Flight Activity.csv: Archivo CSV que contiene datos de la actividad de vuelo de clientes.
 - Customer Loyalty History.csv: Archivo CSV que contiene datos del historial de lealtad de clientes.
 - final_evaluation_module3: Directorio principal de la resolución de la evaluación final.
-- main: archivo realizado en .py.
-- src: carpeta creada para el soporte en .py. Con archivos de soporte y creación. 
+- src: carpeta creada para el soporte en .py. Con archivos de soporte (conexion y eda) y creación (bbdd). 
 - main: archivo .py para la ejecución completa.
 - SQL- Base tables: Archivo SQL que contiene la base y creación de las tablas. 
 

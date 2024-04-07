@@ -9,11 +9,12 @@ import pandas as pd
 import numpy as np
 # %%
 def creacion_bbdd (usuario, contrasenya):
-    """Esta funcion crea la bbdd fly en mysql
+    """Esta funcion crea la bbdd fly en mysql.
 
     Args:
-    - usuario: usuario para la conexion al servidor
-    - contraseña: contraseña para la conexión al servidor
+    - host (str): Dirección del servidor de la base de datos.
+    - user (str): Usuario para la conexión.
+    - password (str): Contraseña para la conexión.
 
     Returns:
     No devuelve ningún valor
@@ -24,7 +25,7 @@ def creacion_bbdd (usuario, contrasenya):
 
 
     mycursor = cnx.cursor()
-    query = "CREATE SCHEMA "
+    query = "CREATE SCHEMA IF NOT EXISTS `fly`"
 
     try: 
         mycursor.execute(query) 
@@ -42,9 +43,10 @@ def creacion_tablas (usuario, contrasenya, bbdd):
     """Esta funcion crea las tablas Activity y History en mysql
 
     Args:
-    - usuario: usuario para la conexion al servidor
-    - contraseña: contraseña para la conexión al servidor
-    - bbdd: nombre de la bbdd donde queremos crear las tablas
+    - host (str): Dirección del servidor de la base de datos.
+    - user (str): Usuario para la conexión.
+    - password (str): Contraseña para la conexión.
+    - database: nombre de la bbdd donde queremos crear las tablas
 
     Returns:
     No devuelve ningún valor
@@ -94,7 +96,7 @@ query_insertar_History = "INSERT INTO Activity (Loyalty Number, Year, Month, Fli
 query_insertar_Activity = "INSERT INTO History (Loyalty Number, Country, Province, City, Postal Code, Gender, Education, Salary, Marital Status, Loyalty Card, CLV, Enrollment Type, Enrollment Year) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
 
-def insertar_datos(query, contraseña, nombre_bbdd, lista_tuplas):
+def insertar_datos(query, contraseña, nombre_bbdd, table_name, data):
     """
     Inserta datos en una base de datos utilizando una consulta y una lista de tuplas como valores.
 
@@ -116,7 +118,7 @@ def insertar_datos(query, contraseña, nombre_bbdd, lista_tuplas):
     mycursor = cnx.cursor()
 
     try:
-        mycursor.executemany(query, lista_tuplas)
+        mycursor.executemany(query, data)
         cnx.commit()
         print(mycursor.rowcount, "registro/s insertado/s.")
         cnx.close()
@@ -127,5 +129,3 @@ def insertar_datos(query, contraseña, nombre_bbdd, lista_tuplas):
         print("SQLSTATE", err.sqlstate)
         print("Message", err.msg)
         cnx.close()
-
-# %%

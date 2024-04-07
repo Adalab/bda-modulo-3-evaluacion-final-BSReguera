@@ -17,7 +17,7 @@ query_tabla_History = """CREATE TABLE IF NOT EXISTS `fly`.`History` (
   PRIMARY KEY (`Loyalty Number`));"""
   
 query_tabla_Activity = """CREATE TABLE IF NOT EXISTS `fly`.`Activity` (
-  `Loyalty Number` INT NOT NULL,
+  `Loyalty Number` INT NOT NULL,L
   `Year` FLOAT NOT NULL,
   `Month` FLOAT NOT NULL,
   `Flights Booked` FLOAT NOT NULL,

@@ -386,11 +386,18 @@ def normalidad(dataframe, columna):
         print("No hay suficiente evidencia para rechazar la hipótesis nula de normalidad (p-valor >= 0.05).")
 
 # Calcular la normalidad para levels_superior_education
-normalidad(levels_superior_education, 'Flights Booked')
+normalidad(filtered_superior, 'Flights Booked')
 
 # Calcular la normalidad para levels_basic_education
-normalidad(levels_basic_education, 'Flights Booked')
+normalidad(filtered_basic, 'Flights Booked')
 
-
-
-# %%
+def mann_whitney_test(group1, group2):
+    stat, p_value = mannwhitneyu(group1, group2)
+    print(f'Prueba de Mann-Whitney U:')
+    print(f'Estadística = {stat}, p-valor = {p_value}')
+    if p_value < 0.05:
+        print("Existe una diferencia significativa entre los grupos.")
+    else:
+        print("No hay evidencia suficiente para afirmar una diferencia significativa entre los grupos.")
+        
+mann_whitney_test(filtered_superior['Flights Booked'], filtered_basic['Flights Booked'])       
