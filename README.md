@@ -5,8 +5,9 @@
 
 ## INDICE
 1. [Descripción](#1-descripción)
-2. [Contenido](#2-contenido)
-3. [¿Porqué este repositorio es útil?](#3-utilidad)
+2. [Herramientas utilizadas](#2-herramientas)
+3. [Contenido](#3-contenido)
+4. [¿Porqué este repositorio es útil?](#4-utilidad)
    
 
 Aquí encontrarás la resolución completa de la evaluación final del módulo 3 "Transformando datos con magia: Domina la transformación de datos con Python". Este repositorio está diseñado para proporcionarte una comprensión profunda y práctica de los conceptos fundamentales de la transformación de datos.
@@ -27,12 +28,21 @@ Los temas cubiertos en la evaluación final incluyen:
 - Proceso de ETL (Extract, Transform, Load) y Pipeline: Diseño y desarrollo de pipelines para la manipulación y transformación eficiente de datos.
 - A/B Testing: comparación y evaluación de cambios o experimentos en productos o servicios.
   
-# 2. CONTENIDO: 
-- evaluacion_final/: Directorio principal de la resolución de la evaluación final.
+# 2. HERRAMIENTAS UTILIZADAS: 
+- La prueba se ha realizado en VSCode en archivos ".ipynb" y ".py".
+
+Las librerías utilizadas han sido: Pandas, Numpy, Seaborn, Matplotlib  y mysql.connector.
+
+# 3. CONTENIDO: 
 - Customer Flight Activity.csv: Archivo CSV que contiene datos de la actividad de vuelo de clientes.
 - Customer Loyalty History.csv: Archivo CSV que contiene datos del historial de lealtad de clientes.
+- final_evaluation_module3: Directorio principal de la resolución de la evaluación final.
+- main: archivo realizado en .py.
+- src: carpeta creada para el soporte en .py. Con archivos de soporte y creación. 
+- main: archivo .py para la ejecución completa.
+- SQL- Base tables: Archivo SQL que contiene la base y creación de las tablas. 
 
-# 3. ¿PORQUÉ ESTE REPOSITORIO ES ÚTIL?: 
+# 4. ¿PORQUÉ ESTE REPOSITORIO ES ÚTIL?: 
 - Práctica Profunda: Las soluciones proporcionadas permiten practicar y reforzar los conceptos fundamentales aprendidos en el módulo 3, centrándose en áreas críticas como la exploración, limpieza, visualización y análisis de datos, así como en el proceso de ETL y A/B Testing.
 - Referencia Clara: Cada solución está realizada de forma clara y detallada, lo que ayuda a comprender cómo y por qué se implementa cierto enfoque. Esto proporciona una referencia valiosa para enfrentarse a problemas similares en el futuro.
 
